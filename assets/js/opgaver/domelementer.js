@@ -7,17 +7,19 @@ Du skal finde elementet med id="redFigure" og console logge det.
 Du skal finde elementet med id="yellowFigure" og console logge det. 
 */
 
-// din kode her
+const redFig = document.getElementById("redFigure");
+console.log(redFig);
 
+const yellowFig = document.getElementById("yellowFigure");
+console.log(yellowFig);
 
 /* opgave 1.2
 Du skal ændre baggrundsfarve på de to elementer du har fundet i opgave 1.1
 farven på elementerne skal være blå. brug evt. elelement.style.backgroundColor
 */
 
-
-// din kode her
-
+redFig.style.backgroundColor = "blue";
+yellowFig.style.backgroundColor = "blue";
 
 
 /* opgave 2.1
@@ -26,16 +28,22 @@ Du skal oprette følgende HTML elementer i Elementet med id opgaveTwo.
 - et p med teksten: Jeg har løst opgave 2.1
 */
 
+const opgaveTwo = document.getElementById("opgaveTwo");
+const opgaveH2 = document.createElement("h2");
+opgaveH2.innerHTML = "Opgave 2.1 løsning";
+const opgaveP = document.createElement("p");
+opgaveP.innerHTML = "Jeg har løst opgave 2.1";
 
-// din kode her
-
+opgaveTwo.appendChild(opgaveH2);
+opgaveTwo.appendChild(opgaveP);
 
 // opgave 3 liveHTML lists
 /* opgave 3.1
 Du skal finde alle elementer med klassen purpleFigures og console logge resultatet
 */
 
-// din kode her
+const purpleFigs = document.getElementsByClassName('purpleFigures');
+console.log(purpleFigs);
 
 
 /* opgave 3.2
@@ -44,8 +52,10 @@ til et array hvor du kan bruge map funktionen til at ændre baggrundsfarven til 
 array.from beskrivelse HER: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from
 */
 
-// din kode her
+const purpleFigsArray = Array.from(purpleFigs);
+console.log(purpleFigsArray);
 
+purpleFigsArray.map()
 
 /* opgave 3.3
 Brug din array til at ændre h3 elementets, inden i purpleFigures, tekst til RED. du kan bruge
